@@ -3,7 +3,14 @@
 <h2>List of Dogs</h2>
 <ul>
   {{#each @model as |dogs|}}
-    <li>{{dogs.name}}</li>
+    <li>
+        <div>
+            {{dogs.name}}
+            {{dogs.owner}}
+            {{dogs.size}}
+            {{dogs.description}}
+        </div>
+    </li>
   {{/each}}
 </ul>
 
