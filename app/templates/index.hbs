@@ -1,0 +1,18 @@
+{{page-title "Index"}}
+
+<MainContainer>
+    <AddDog />
+    <Row>
+    {{#each this.model as |dog|}}
+        <DogCard 
+        @name={{dog.name}}
+        @owner={{dog.owner}}
+        @breed={{dog.breed}}
+        @size={{dog.size}}
+        @description={{dog.description}}
+        />
+    {{/each}}
+    </Row>
+</MainContainer>
+
+{{outlet}}
