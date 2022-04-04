@@ -2,14 +2,14 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { dogs } from '../Data/dogs-data';
+import { service } from '@ember/service';
 
 export default class AddDogComponent extends Component {
-    
-    
-    @tracked dogs;
+  // @tracked dogs;
+  @service store;
 
   @action
-  createDog(ojbect){
+  createDog(ojbect) {
     const newDog = {
       name: 'Ava',
       breed: 'chichi',
@@ -17,9 +17,14 @@ export default class AddDogComponent extends Component {
       size: 'SM',
       description: 'a good girl',
     };
-    
-    dogs.push(newDog);
-    console.log(dogs)
-    return dogs
+
+    return this.store.createRecord('dog', newDog).save();
+    // return this.store.createRecord('dog', newDog).save().then((res) => {
+    //     console.log(res);
+    //   });
+
+    // dogs.push(newDog);
+    // console.log(dogs);
+    // return dogs;
   }
 }

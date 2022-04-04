@@ -1,12 +1,6 @@
-export const dogs = [
+export default [
   {
-    name: 'Saul',
-    breed: 'Lab',
-    owner: 'Dave',
-    size: 'LG',
-    description: 'An energetic lab that loves to play',
-  },
-  {
+    id: 1,
     name: 'Goldie',
     breed: 'Lab',
     owner: 'Dave',
@@ -14,6 +8,15 @@ export const dogs = [
     description: 'Office mommy dog',
   },
   {
+    id: 2,
+    name: 'Saul',
+    breed: 'Lab',
+    owner: 'Dave',
+    size: 'LG',
+    description: 'An energetic lab that loves to play',
+  },
+  {
+    id: 3,
     name: 'Gio',
     breed: 'Terrier',
     owner: 'Dan',
@@ -21,6 +24,7 @@ export const dogs = [
     description: 'A fluffy terrier mix who runs on treats',
   },
   {
+    id: 4,
     name: 'Sophie',
     breed: 'Pit Bull',
     owner: 'Christina',
@@ -28,6 +32,7 @@ export const dogs = [
     description: 'A brindled pitbull princess',
   },
   {
+    id: 5,
     name: 'Taro',
     breed: 'Great Pyrenees',
     owner: 'Sara',
@@ -35,6 +40,7 @@ export const dogs = [
     description: 'A great pyrenees mix often confused with a horse',
   },
   {
+    id: 6,
     name: 'Gabby',
     breed: 'Pit Bull',
     owner: 'Dan',
@@ -42,6 +48,7 @@ export const dogs = [
     description: 'A tutu-flaunting American bulldog/pitbull mix',
   },
   {
+    id: 7,
     name: 'Percy',
     breed: 'Husky',
     owner: 'Monica',
@@ -49,6 +56,7 @@ export const dogs = [
     description: 'A wolf-sized pup with piercing blue eyes',
   },
   {
+    id: 8,
     name: 'Benny',
     breed: 'Hound',
     owner: 'Brandon',
@@ -56,6 +64,7 @@ export const dogs = [
     description: 'A belly-rub loving hound-mix',
   },
   {
+    id: 9,
     name: 'Baxter',
     breed: 'Chihuahua',
     owner: 'Skip',
@@ -63,6 +72,7 @@ export const dogs = [
     description: 'The eldest, wisest, and tiniest dog of the office',
   },
   {
+    id: 10,
     name: 'Vyla',
     breed: 'Poodle',
     owner: 'Skip',
