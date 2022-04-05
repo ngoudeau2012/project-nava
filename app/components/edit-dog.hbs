@@ -1,0 +1,47 @@
+{{!-- <form  {{on 'submit' (fn this.editDog @dog)}} >
+  <label for="fname">Name:</label><br>
+  {{input type="text" id="fname" placeholder="name" value=@name}}<br>
+  <label for="lname">Owner:</label><br>
+  {{input type="text" id="fname" placeholder="owner"  value=@owner}}
+  {{input type="text" id="fname" placeholder="breed"  value=@breed}}
+  {{input type="text" id="fname" placeholder="size" value=@size}}
+  {{textarea type="text" id="fname" placeholder="description" value=@description}}
+  <button type="submit" >Save</button>
+</form> --}}
+<MainContainer>
+<Row>
+<div class="col-lg-3"></div>
+<form class="col-lg-6 my-2"   {{on 'submit' (fn this.editDog @dog)}}>
+  <div class="card">
+    <div class="card-title">
+      <div class="card-input">
+        <label for="name"><h1>Name</h1></label><br>
+        {{input type="text" id="fname" placeholder="name" value=@name}}<br>
+      </div>
+    </div>
+    <div class="card-description">
+      <div class="card-input">
+        <label for="owner">Owner</label>
+        {{input type="text" id="fname" placeholder="owner"  value=@owner}}
+      </div>
+      <div class="card-input">
+        <label for="size">Size</label>
+        {{input type="text" id="fname" placeholder="size" value=@size}}
+      </div>
+      <div class="card-input">
+        <label for="breed">Breed</label>
+        {{input type="text" id="fname" placeholder="breed"  value=@breed}}
+      </div>
+      <div class="card-input">
+        <label for="description">Fun Facts</label>
+        {{textarea type="text" id="fname" placeholder="description" value=@description}}
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="submit" >Save dog</button>
+    </div>
+  </div>
+</form>
+<div class="col-lg-3"></div>
+</Row>
+</MainContainer>

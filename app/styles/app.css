@@ -1,0 +1,155 @@
+:root{
+    --accent-color: #FFCC80;
+}
+body h1{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    position: relative;
+}
+
+.container::after{
+    position: absolute;
+    content: '';
+    top: -50px;
+    left: -100px;
+    right: -100px;
+    background-color: #4D5061;
+    height: 200px;
+    z-index: 0;
+}
+
+.row{
+    position: relative;
+    z-index: 1;
+    align-items: stretch;
+}
+.nav{
+    padding: 2em 6%;
+    background-color: #4D5061;
+    align-items: center;
+}
+.nav .nav-item{
+    margin-left: 1rem;
+}
+.nav .nav-item:first-of-type{
+    margin-left: 0rem;
+}
+.nav-item a{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: white;
+    margin-left: 0rem;
+}
+.nav-item a::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    right: 30%;
+    left: 30%;
+    bottom: 0;
+    background-color: var(--accent-color);
+    transition: all .3s;
+}
+.nav-item a:hover:after{
+    right: 0%;
+    left: 0%;
+
+}
+.card{
+    position: relative;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card .card-title{
+    padding: 1rem;
+    background-color: #ECEFF1;
+}
+.card .card-description{
+    position: relative;
+    padding: 1rem
+}
+.flex{
+    display: flex;
+}
+.card a{
+    text-decoration: none;
+}
+.card button{
+    border: 0;
+}
+.styled-button{
+    position: absolute;
+    border-radius: 50%;
+    padding: .5em;
+    transition: all .2s linear;
+}
+.styled-button:hover{
+    background-color: #ECEFF1;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.styled-button button{
+    margin: 0 !important;
+    background: transparent !important;
+    font-size: 15px;
+}
+.card-title .styled-button{
+    right: 1em;
+    top: 1em;
+}
+.card-description .styled-button{
+    right: .5em;
+    top: .5em;
+}
+.card-description .styled-button:hover{
+    background-color: white;
+    right: .5em;
+    top: .5em;
+}
+
+.card-footer{
+    border-top: 0px;
+    padding: 0px;
+}
+.card-footer button{
+    position: relative;
+    width: 100%;
+    padding: .5em;
+    background-color: #ECEFF1;
+}
+.card-footer button::after{
+    position: absolute;
+    content: '';
+    right: 45%;
+    left: 45%;
+    bottom: 10px;
+    height: 1px;
+    background-color: var(--accent-color);
+    transition: all .3s;
+}
+
+.card-footer button:hover::after{
+    right: 30%;
+    left: 30%;
+}
+
+.card-input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5em;
+    gap: 1em;
+}
+.card-input input, .card-input textarea{
+    width: 65%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 5px;
+}
+

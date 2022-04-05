@@ -40,10 +40,7 @@ export default function (config) {
       //   console.log(name);
       //   return schema.dogs.where({ name: name });
       // });
-      this.put('/dogs/:id', (schema, request) => {
-        let id = request.params.id;
-        return;
-      });
+      this.post('/dogs/:id');
       this.del('/dogs/:id');
     },
   };

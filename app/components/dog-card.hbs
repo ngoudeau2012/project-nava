@@ -1,13 +1,33 @@
 
-<div class="col-3 my-2">
-    <div class="card p-3">
-    <LinkTo @route="dog" @model={{@id}}><h1>{{@name}}</h1></LinkTo>
-    <p>{{@owner}}</p>
-    <p>{{@size}}</p>
-    <p>{{@breed}}</p>
-    <p>{{@description}}</p>
-    <DeleteBtn
-        @dog={{@dog}}
-        />
+{{!-- <div class="col-lg-3 my-2"> --}}
+    <div class="card">
+    <div class="card-title">
+        <div class="styled-button">
+                <DeleteBtn
+                @dog={{@dog}}
+                />
+            </div>
+            <h1>{{@name}}</h1>
     </div>
-</div>
+    <div class="card-description">
+        <div class="styled-button">
+            <LinkTo @route="edit"  @model={{@id}}>
+                <button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+            </LinkTo>
+        </div>
+        <p>Owner: {{@owner}}</p>
+        <p>Size: {{@size}}</p>
+        <p>Breed: {{@breed}}</p>
+        <div>Fun facts:</div>
+        <p>{{@description}}</p>
+    
+    </div>
+    <div class="card-footer">
+        <LinkTo @route="dog" @model={{@id}}>
+            <button>View Profile</button>
+        </LinkTo>
+    </div>
+    
+    
+    </div>
+{{!-- </div> --}}

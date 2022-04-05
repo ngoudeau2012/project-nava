@@ -1,8 +1,8 @@
 <MainContainer>
-    <AddDog />
-    {{!-- <SearchBar /> --}}
+    {{!-- <SearchBar @dog={{this.model}}/> --}}
     <Row> 
     {{#each this.model as |dog| }}
+    <div class="col-lg-3 my-2">
         <DogCard
         @dog={{dog}}
         @id={{dog.id}}
@@ -12,7 +12,9 @@
         @size={{dog.size}}
         @description={{dog.description}}
         />
+    </div>
     {{/each}}
+    <AddDog/>
     </Row>
 </MainContainer>
 

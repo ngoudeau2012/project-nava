@@ -1,11 +1,33 @@
 
-<form  {{on 'submit' (fn this.createDog)}}>
-  <label for="fname">Name:</label><br>
-  {{input type="text" id="fname" placeholder="name" value=this.name}}<br>
-  <label for="lname">Last name:</label><br>
-  {{input type="text" id="fname" placeholder="owner"  value=this.owner}}
-  {{input type="text" id="fname" placeholder="breed"  value=this.breed}}
-  {{input type="text" id="fname" placeholder="size" value=this.size}}
-  {{textarea type="text" id="fname" placeholder="size" value=this.description}}
-  <button type="submit" >Create dog</button>
+<form class="col-lg-3 my-2"  {{on 'submit' this.createDog}}>
+  <div class="card">
+    <div class="card-title">
+      <div class="card-input">
+        <label for="name"><h1>Name</h1></label><br>
+        {{input className="form-control" type="text" id="name" placeholder="name" value=this.name}}
+      </div>
+    </div>
+    <div class="card-description">
+      <div class="card-input">
+        <label for="owner">Owner</label>
+        {{input type="text" id="owner" placeholder="owner"  value=this.owner}}
+      </div>
+      <div class="card-input">
+        <label for="size">Size</label>
+        {{input type="text" id="size" placeholder="size" value=this.size}}
+      </div>
+      <div class="card-input">
+        <label for="breed">Breed</label>
+        {{input type="text" id="breed" placeholder="breed"  value=this.breed}}
+      </div>
+      <div class="card-input">
+        <label for="description">Fun Facts</label>
+        {{textarea type="text" id="description" placeholder="size" value=this.description}}
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="submit" >Save dog</button>
+    </div>
+
+  </div>
 </form>

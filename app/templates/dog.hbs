@@ -1,7 +1,25 @@
 {{page-title "Dog"}}
-<li>{{this.model.name}}</li>
+{{!-- <li>{{this.model.name}}</li>
 <li>{{this.model.owner}}</li>
 <li>{{this.model.breed}}</li>
 <li>{{this.model.size}}</li>
-<li>{{this.model.description}}</li>
+<li>{{this.model.description}}</li> --}}
+<MainContainer>
+    <Row>
+    <div class="col-lg-3"></div>
+     <div class="col-lg-6">
+        <DogCard
+        @dog={{this.model}}
+        @id={{this.model.id}}
+        @name={{this.model.name}}
+        @owner={{this.model.owner}}
+        @breed={{this.model.breed}}
+        @size={{this.model.size}}
+        @description={{this.model.description}}
+        />
+    </div>
+     <div class="col-lg-3"></div>
+    </Row>
+</MainContainer>
 {{outlet}}
+

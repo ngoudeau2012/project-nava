@@ -13,4 +13,5 @@ Router.map(function () {
   this.route('dogs', function () {
     this.route('search', { path: '/serach?filter[name]' });
   });
+  this.route('edit', { path: '/dogs/:id/edit' });
 });
