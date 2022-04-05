@@ -1,8 +1,11 @@
 
-<form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
+<form  {{on 'submit' (fn this.createDog)}}>
+  <label for="fname">Name:</label><br>
+  {{input type="text" id="fname" placeholder="name" value=this.name}}<br>
   <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-  <button type="submit" {{on 'click' this.createDog}}>Create dog</button>
+  {{input type="text" id="fname" placeholder="owner"  value=this.owner}}
+  {{input type="text" id="fname" placeholder="breed"  value=this.breed}}
+  {{input type="text" id="fname" placeholder="size" value=this.size}}
+  {{textarea type="text" id="fname" placeholder="size" value=this.description}}
+  <button type="submit" >Create dog</button>
 </form>

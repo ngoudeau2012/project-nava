@@ -8,15 +8,16 @@ export default class AddDogComponent extends Component {
   @service store;
 
   @action
-  createDog(ojbect) {
+  createDog(e) {
+    e.preventDefault();
+    console.log(this.name);
     const newDog = {
-      name: 'Ava',
-      breed: 'chichi',
-      owner: 'Nick',
-      size: 'SM',
-      description: 'a good girl',
+      name: this.name,
+      breed: this.breed,
+      owner: this.owner,
+      size: this.size,
+      description: this.description,
     };
-
     return this.store.createRecord('dog', newDog).save();
   }
 }
