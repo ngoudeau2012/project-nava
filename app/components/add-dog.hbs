@@ -1,33 +1,41 @@
 
-<form class="col-lg-3 my-2"  {{on 'submit' this.createDog}}>
+<form id="create-dog-form"class="my-2"  {{on 'submit' this.createDog}}>
   <div class="card">
     <div class="card-title">
-      <div class="card-input">
-        <label for="name"><h1>Name</h1></label><br>
-        {{input className="form-control" type="text" id="name" placeholder="name" value=this.name}}
-      </div>
+      <h1>Create dog:</h1>
     </div>
     <div class="card-description">
       <div class="card-input">
-        <label for="owner">Owner</label>
-        {{input type="text" id="owner" placeholder="owner"  value=this.owner}}
+        <Input className="form-control" @type="text" id="name" placeholder="Name" @value={{this.name}}/>
       </div>
       <div class="card-input">
-        <label for="size">Size</label>
-        {{input type="text" id="size" placeholder="size" value=this.size}}
+        <Input @type="text" id="owner" placeholder="Owner"  @value={{this.owner}}/>
       </div>
       <div class="card-input">
-        <label for="breed">Breed</label>
-        {{input type="text" id="breed" placeholder="breed"  value=this.breed}}
+        <Input @type="text" id="size" placeholder="size" @value={{this.size}} />
       </div>
       <div class="card-input">
-        <label for="description">Fun Facts</label>
-        {{textarea type="text" id="description" placeholder="size" value=this.description}}
+        <Input type="text" id="breed" placeholder="breed"  value={{this.breed}} />
+      </div>
+      <div class="card-input">
+        <Textarea type="text" id="description" placeholder="Fun facts" value={{this.description}}/>
       </div>
     </div>
     <div class="card-footer">
       <button type="submit" >Save dog</button>
     </div>
-
   </div>
 </form>
+
+<div class="card">
+    <div class="card-title">
+      <h1>{{this.name}}</h1>
+    </div>
+    <div class="card-description">
+      <p>Owner: {{this.owner}}</p>
+      <p>Size: {{this.size}}</p>
+      <p>Breed: {{this.breed}}</p>
+      <div>Fun facts:</div>
+      <p>{{this.description}}</p>
+    </div>
+    </div>

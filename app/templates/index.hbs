@@ -1,20 +1,29 @@
 <MainContainer>
-    {{!-- <SearchBar @dog={{this.model}}/> --}}
+    
     <Row> 
-    {{#each this.model as |dog| }}
-    <div class="col-lg-3 my-2">
-        <DogCard
-        @dog={{dog}}
-        @id={{dog.id}}
-        @name={{dog.name}}
-        @owner={{dog.owner}}
-        @breed={{dog.breed}}
-        @size={{dog.size}}
-        @description={{dog.description}}
-        />
+    <div class="col-12">
+        <h1 class="section-header">Here are all the dogos!</h1>
     </div>
+    <div class="col-lg-3">
+        <AddDog/>
+    </div>
+    <div class="col-lg-9">
+    <Row>
+    {{#each this.model as |dog| }}
+        <div class="col-lg-4 my-2">
+            <DogCard
+            @dog={{dog}}
+            @id={{dog.id}}
+            @name={{dog.name}}
+            @owner={{dog.owner}}
+            @breed={{dog.breed}}
+            @size={{dog.size}}
+            @description={{dog.description}}
+            />
+        </div>
     {{/each}}
-    <AddDog/>
+    </Row>
+    </div>
     </Row>
 </MainContainer>
 

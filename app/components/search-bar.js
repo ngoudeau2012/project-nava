@@ -10,11 +10,20 @@ export default class SearchBarComponent extends Component {
   searchDogs(e) {
     e.preventDefault();
     let dog = this.store.peekAll('dog');
+    console.log(this.name)
     let searchTerm = this.name.charAt(0).toUpperCase() + this.name.slice(1);
+
     let filteredList = dog.filterBy('name', searchTerm);
-    let searchId = filteredList[0].id;
-    // console.log(model)
-    console.log(filteredList[0].id);
-    this.router.transitionTo('dog', searchId);
+
+    console.log(filteredList)
+    if(filteredList.length === 0){
+      alert("Sorry, there were no dogs found.")
+      return
+    }else{
+      let searchId = filteredList[0].id;
+
+      console.log(filteredList[0].id);
+      this.router.transitionTo('dog', searchId);
+    }
   }
 }

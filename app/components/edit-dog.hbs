@@ -5,26 +5,26 @@
   <div class="card">
     <div class="card-title">
       <div class="card-input">
-        <label for="name"><h1>Name</h1></label><br>
-        {{input type="text" id="fname" placeholder="name" value=@name}}<br>
+        <label for="name"><h1>Name</h1></label>
+        <Input @type="text" placeholder="name" @value={{@name}}/>
       </div>
     </div>
     <div class="card-description">
       <div class="card-input">
         <label for="owner">Owner</label>
-        {{input type="text" id="fname" placeholder="owner"  value=@owner}}
+        <Input @type="text" placeholder="owner"  @value={{@owner}}/>
       </div>
       <div class="card-input">
         <label for="size">Size</label>
-        {{input type="text" id="fname" placeholder="size" value=@size}}
+        <Input @type="text" placeholder="size" @value={{@size}} />
       </div>
       <div class="card-input">
         <label for="breed">Breed</label>
-        {{input type="text" id="fname" placeholder="breed"  value=@breed}}
+        <Input @type="text" placeholder="breed"  @value={{@breed}} />
       </div>
       <div class="card-input">
         <label for="description">Fun Facts</label>
-        {{textarea type="text" id="fname" placeholder="description" value=@description}}
+        <Textarea @type="text" placeholder="description" @value={{@description}}/>
       </div>
     </div>
     <div class="card-footer">

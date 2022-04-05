@@ -16,6 +16,13 @@ export default class AddDogComponent extends Component {
       size: this.size,
       description: this.description,
     };
-    return this.store.createRecord('dog', newDog).save();
+
+    if(!newDog.name){
+      alert("Please add a name for the dog before hitting save");
+      return
+    }
+    return this.store.createRecord('dog', newDog).save().then(()=>{
+      alert("Nice! You've got a new friend :)")
+    });
   }
 }
