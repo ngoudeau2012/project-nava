@@ -10,7 +10,7 @@
     <div class="card-description">
         <div class="styled-button">
             <LinkTo @route="edit"  @model={{@id}}>
-                <button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="edit" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
             </LinkTo>
         </div>
         <p>Owner: {{@owner}}</p>
@@ -22,7 +22,7 @@
     </div>
     <div class="card-footer">
         <LinkTo @route="dog" @model={{@id}}>
-            <button>View Profile</button>
+            <button type="button">View Profile</button>
         </LinkTo>
     </div>
     </div>
