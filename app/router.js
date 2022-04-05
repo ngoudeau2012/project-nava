@@ -9,9 +9,5 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('not-found', { path: '/*path' });
   this.route('dog', { path: '/dogs/:id' });
-
-  this.route('dogs', function () {
-    this.route('search', { path: '/serach?filter[name]' });
-  });
   this.route('edit', { path: '/dogs/:id/edit' });
 });

@@ -25,21 +25,9 @@ export default function (config) {
     ...config,
     models: { ...discoverEmberDataModels(), ...config.models },
     routes() {
-      // this.namespace = '/api'
-
       this.resource('dog');
-      this.get('/dogs', (schema) => {
-        return schema.dogs.all();
-      });
-      this.get('/dogs/:id', (schema, request) => {
-        let id = request.params.id;
-        return schema.dogs.find(id);
-      });
-      // this.get('/dogs/search?', (schema, request) => {
-      //   let name = request.params.filter;
-      //   console.log(name);
-      //   return schema.dogs.where({ name: name });
-      // });
+      this.get('/dogs');
+      this.get('/dogs/:id');
       this.post('/dogs/:id');
       this.del('/dogs/:id');
     },
