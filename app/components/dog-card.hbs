@@ -1,7 +1,13 @@
-<div class="card p-3 m-2">
-    <h1>{{@name}}</h1>
+
+<div class="col-3 my-2">
+    <div class="card p-3">
+    <LinkTo @route="dog" @model={{@id}}><h1>{{@name}}</h1></LinkTo>
     <p>{{@owner}}</p>
     <p>{{@size}}</p>
     <p>{{@breed}}</p>
     <p>{{@description}}</p>
+    <DeleteBtn
+        @dog={{@dog}}
+        />
+    </div>
 </div>

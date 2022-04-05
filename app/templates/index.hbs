@@ -1,16 +1,17 @@
 <MainContainer>
     <AddDog />
+    {{input type="text" id="myInput" value=this.filter}}
     <Row> 
     {{#each this.model as |dog| }}
-    <LinkTo @route="dog" @model={{dog}} class="col-3">
-        <DogCard 
+        <DogCard
+        @dog={{dog}}
+        @id={{dog.id}}
         @name={{dog.name}}
         @owner={{dog.owner}}
         @breed={{dog.breed}}
         @size={{dog.size}}
         @description={{dog.description}}
         />
-    </LinkTo>
     {{/each}}
     </Row>
 </MainContainer>

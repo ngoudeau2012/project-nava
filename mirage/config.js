@@ -29,19 +29,22 @@ export default function (config) {
 
       this.resource('dog');
       this.get('/dogs', (schema) => {
-        console.log(schema.dogs.all());
         return schema.dogs.all();
       });
       this.get('/dogs/:id', (schema, request) => {
         let id = request.params.id;
-        console.log(schema.dogs.find(id));
         return schema.dogs.find(id);
       });
+      // this.get('/dogs/search?', (schema, request) => {
+      //   let name = request.params.filter;
+      //   console.log(name);
+      //   return schema.dogs.where({ name: name });
+      // });
       this.put('/dogs/:id', (schema, request) => {
         let id = request.params.id;
         return;
       });
-      // this.del('/dogs/:id');
+      this.del('/dogs/:id');
     },
   };
   return createServer(finalConfig);
