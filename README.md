@@ -1,6 +1,6 @@
 # project-nava
 
-This is a small CRUD application built using the Ember.js framework that loads a JSON file to a Mirage Database at the start. The user will see cards of all the dogs currently in the database along with their attributes. At the end of the list, there is a card that has input fields that will alow the user to create a new dog that will append to the end of the cards. The user also has the ability to search for a dog by its name. The search will bring you to the dogs specific profile.
+This is a small CRUD application built using the Ember.js framework. It loads a JSON file to a Mirage Database when you start the server. The user will see cards of all the dogs currently in the database along with all of their attributes. At the end of the list, there is a card that has input fields that will alow the user to create a new dog that will append to the end of the cards. The user also has the ability to search for a dog by its name. The search will bring you to the dogs specific profile.
 
 Each card has a "view profile" button, and "edit" button, and a "delete" button. All CRUD operations save to the virtual store and the data will be reset once the page is refreshed. 
 
