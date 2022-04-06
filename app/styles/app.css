@@ -1,3 +1,4 @@
+/******** ROOT STYLE CHANGES ********/
 :root{
     --accent-color: #FFCC80;
 }
@@ -11,15 +12,14 @@ body h1{
 body{
     font-family: 'Roboto', sans-serif;
 }
-.section-header{
-    color: #CFD8DC;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #CFD8DC;
+.flex{
+    display: flex;
 }
+
+/******** LARGE ELEMENTS ********/
 .container{
     position: relative;
 }
-
 .container::after{
     position: absolute;
     content: '';
@@ -30,12 +30,18 @@ body{
     height: 200px;
     z-index: 0;
 }
-
+.section-header{
+    color: #CFD8DC;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #CFD8DC;
+}
 .row{
     position: relative;
     z-index: 1;
     align-items: stretch;
 }
+
+/******** NAVBAR STYLING ********/
 .nav{
     padding: 2em 6%;
     background-color: #4D5061;
@@ -69,6 +75,7 @@ body{
     left: 0%;
 
 }
+/******** CARD STYLING ********/
 .card{
     position: relative;
     border: none;
@@ -84,15 +91,49 @@ body{
     position: relative;
     padding: 1rem
 }
-.flex{
-    display: flex;
-}
 .card a{
     text-decoration: none;
 }
 .card button{
     border: 0;
 }
+.card-footer{
+    border-top: 0px;
+    padding: 0px;
+}
+.card-footer button{
+    position: relative;
+    width: 100%;
+    padding: .5em;
+    background-color: #ECEFF1;
+}
+.card-footer button::after{
+    position: absolute;
+    content: '';
+    right: 45%;
+    left: 45%;
+    bottom: 10px;
+    height: 1px;
+    background-color: var(--accent-color);
+    transition: all .3s;
+}
+.card-footer button:hover::after{
+    right: 30%;
+    left: 30%;
+}
+.card-input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5em;
+    gap: 1em;
+}
+.card-input input, .card-input textarea{
+    width: 100%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 5px;
+}
+/******** EDIT/DELETE BTN STYLING ********/
 .styled-button{
     position: absolute;
     border-radius: 50%;
@@ -121,43 +162,3 @@ body{
     right: .5em;
     top: .5em;
 }
-
-.card-footer{
-    border-top: 0px;
-    padding: 0px;
-}
-.card-footer button{
-    position: relative;
-    width: 100%;
-    padding: .5em;
-    background-color: #ECEFF1;
-}
-.card-footer button::after{
-    position: absolute;
-    content: '';
-    right: 45%;
-    left: 45%;
-    bottom: 10px;
-    height: 1px;
-    background-color: var(--accent-color);
-    transition: all .3s;
-}
-
-.card-footer button:hover::after{
-    right: 30%;
-    left: 30%;
-}
-
-.card-input{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .5em;
-    gap: 1em;
-}
-.card-input input, .card-input textarea{
-    width: 100%;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-    border-radius: 5px;
-}
-
