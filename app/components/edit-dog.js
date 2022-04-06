@@ -8,7 +8,6 @@ export default class EditDogComponent extends Component {
   @action
   editDog(dog, e) {
     e.preventDefault();
-    console.log(dog.id);
     const newDog = dog;
     dog.save().then(() => {
       this.router.transitionTo('dog', dog.id);

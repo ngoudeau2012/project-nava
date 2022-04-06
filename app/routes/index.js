@@ -7,7 +7,6 @@ export default class IndexRoute extends Route {
   @service store;
 
   model() {
-    console.log('test');
     const dogList = this.store.findAll('dog');
     return dogList;
   }
