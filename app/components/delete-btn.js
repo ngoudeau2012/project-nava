@@ -8,7 +8,6 @@ export default class DeleteBtnComponent extends Component {
   @action
   deleteDog(dog) {
     dog.destroyRecord();
-    console.log(this.router.currentRoute.name)
     if(this.router.currentRoute.name !== 'index'){
       this.router.transitionTo('index');
     }

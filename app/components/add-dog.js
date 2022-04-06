@@ -8,7 +8,6 @@ export default class AddDogComponent extends Component {
   @action
   createDog(e) {
     e.preventDefault();
-    console.log(this);
     const newDog = {
       name: this.name,
       breed: this.breed,
