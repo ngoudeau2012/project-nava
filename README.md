@@ -4,6 +4,8 @@ This is a small CRUD application built using the Ember.js framework. It loads a 
 
 Each card has a "view profile" button, and "edit" button, and a "delete" button. All CRUD operations save to the virtual store and the data will be reset once the page is refreshed. 
 
+Fun fact! The project name is a combination of my two dogs, Nala and Ava <3
+
 ![screenshot](./public/images/ProjectNava.gif)
 
 ## Prerequisites
